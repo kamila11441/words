@@ -1,8 +1,8 @@
 // Add the project's Supabase URL and public anon key here (see SETUP.md).
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-const configured = SUPABASE_URL.startsWith('https://') && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY';
-const client = configured && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+const SUPABASE_URL = 'https://ivlpuykrratybgtkspfd.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_3juSI4heCdi9uk3AWXReAw_iUM0Dber';
+const configured = SUPABASE_URL.startsWith('https://') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');
+const client = configured && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
 const $ = id => document.getElementById(id);
 let user = null, profile = null, entries = [], authMode = 'login', editing = null, isGuest = false;
 let language=localStorage.getItem('our-words-language')||'en';
